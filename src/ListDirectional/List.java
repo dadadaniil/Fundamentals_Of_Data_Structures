@@ -13,8 +13,8 @@ class List {
         return first == null;
     }
 
-    public void pushBack(String _val) {
-        Node p = new Node(_val);
+    public void push(String value) {
+        Node p = new Node(value);
         if (isEmpty()) {
             first = p;
             last = p;
@@ -27,6 +27,7 @@ class List {
     public int size() {
         int count = 0;
         Node current = first;
+
         while (current != last) {
             count++;
             current = current.getNext();
@@ -39,22 +40,25 @@ class List {
         if (index < 0 || index > size() - 1) {
             throw new RuntimeException("Index is invalid.");
         }
+
         Node current = first;
         for (int i = 0; i < index; i++) {
             current = current.getNext();
         }
+
         return current.getVal();
     }
 
-    public void set(int index,String _val) {
+    public void setOnDefinitivePlace(int index, String value) {
         if (index < 0 || index > size() - 1) {
             throw new RuntimeException("Index is invalid.");
         }
-        Node p = new Node(_val);
+        Node p = new Node(value);
         Node current = first;
-        for (int i = 0; i < index-1; i++) {
+
+        for (int i = 0; i < index - 1; i++) {
             current = current.getNext();
         }
-        current.setVal(_val);
+        current.setVal(value);
     }
 }

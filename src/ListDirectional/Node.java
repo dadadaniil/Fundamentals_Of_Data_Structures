@@ -3,8 +3,8 @@ package ListDirectional;
 public class Node {
     private String val;
     private Node next;
-    public Node(String _val) {
-        val = _val;
+    public Node(String value) {
+        val = value;
         next = null;
     }
 

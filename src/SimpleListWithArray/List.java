@@ -28,11 +28,11 @@ public class List {
         }
     }
 
-    public void replace(int itemToReplace,int index) {
+    public void replace(int itemToReplace, int index) {
         if (index < 0 || index > count - 1) {
             throw new RuntimeException("Index is invalid.");
         }
-        p[index]=itemToReplace;
+        p[index] = itemToReplace;
     }
 
     public void insert(int item, int index) {
